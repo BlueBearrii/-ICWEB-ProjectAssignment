@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/9996937e6d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+      integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
+      integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>DEVELOPMENT</title>
+  </head>
+
+  <body>
+    <ul
+      class="nav justify-content-start align-items-center bg-transparent position-absolute w-100"
+      id="nav_style"
+    >
+      <div class="row w-100">
+        <div class="col-md-8" id="logo">Developer</div>
+
+        <div
+          class="col-md-4 d-none d-md-block text-center btn-close-white"
+          id="nav_text_style"
+        >
+          <div class="row">
+            <li class="col-md-3 nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >HOME</a
+              >
+              <ul class="dropdown-menu"></ul>
+            </li>
+
+            <li class="col-md-3 nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >ABOUT US</a
+              >
+              <ul class="dropdown-menu"></ul>
+            </li>
+
+            <li class="col-md-3 nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >NEWS</a
+              >
+              <ul class="dropdown-menu"></ul>
+            </li>
+
+            <li class="col-md-3 nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >CONTACT US</a
+              >
+              <ul class="dropdown-menu"></ul>
+            </li>
+          </div>
+        </div>
+      </div>
+    </ul>
+
+    <header>
+      <div class="overlay"></div>
+      <div class="bg_slider">
+        <div
+          id="carouselExampleSlidesOnly"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" id="ad1"></div>
+            <div class="carousel-item" id="ad2"></div>
+            <div class="carousel-item" id="ad3"></div>
+          </div>
+        </div>
+      </div>
+      <h3 id="header_title">DEVELOPMENT</h3>
+      <a id="header_title_second">We are web developer</a>
+      <table id="table_btn_title">
+        <tr>
+          <td>
+            <button type="button" id="btn_read_more" onclick="smoothScroll()">
+              READ MORE
+            </button>
+          </td>
+          <td>
+            <button type="button" id="btn_learn_more">LEARN MORE</button>
+          </td>
+        </tr>
+      </table>
+    </header>
+
+    <div class="container p-5" id="service">
+      <div
+        class="container-fluid text-center"
+        style="
+          color: rgb(66, 66, 66);
+          font-size: 1.5em;
+          font-weight: 600;
+          letter-spacing: 0.12em;
+        "
+      >
+        <a
+          >SERVICES<a
+            style="
+              color: rgb(250, 164, 36);
+              font-size: 1.2em;
+              font-weight: 600;
+              letter-spacing: 0.12em;
+            "
+            >.</a
+          ></a
+        >
+      </div>
+      <div class="row">
+        <div class="col-sm text-center p-5">
+          <span>
+            <i class="far fa-edit"></i>
+          </span>
+          <p id="description">WEB DESIGN</p>
+          <p id="description_detail">
+            Maecenas tempus. tellus eget condimentum rhoncus. sem quam semper
+            libero. sit amet adipiscing sem.
+          </p>
+        </div>
+        <div class="col-sm text-center p-5">
+          <span>
+            <i class="fas fa-cog"></i>
+          </span>
+
+          <p id="description">DEVELOPMENT</p>
+          <p id="description_detail">
+            Donec sodales sagittis magna. hendrerit id. torem. Maecenas nec odio
+            et ante tincidunt tempus, augue velit cursus nunc.
+          </p>
+        </div>
+        <div class="col-sm text-center p-5">
+          <span>
+            <i class="fab fa-apple"></i>
+          </span>
+
+          <p id="description">BRANDING</p>
+          <p id="description_detail">
+            At vero eos et accusamus et lusto odio disnissimos ducimus qui
+            blanditlis praesentium voluptatum deleniti atque.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm text-center p-5">
+          <span>
+            <i class="far fa-edit"></i>
+          </span>
+          <p id="description">PHOTOGRAPHY</p>
+          <p id="description_detail">
+            Excepturi sint occaecati cupiditate non provident. similique sunt in
+            cuipa qui offica deserunt mollitia animi. id est laborum et dolorum
+            fuga.
+          </p>
+        </div>
+        <div class="col-sm text-center p-5">
+          <span>
+            <i class="fas fa-cog"></i>
+          </span>
+          <p id="description">TYPOGRAPHY</p>
+          <p id="description_detail">
+            Et harum quidem rerum facilis est expedita distinctlo. Nam libero
+            tempore. cum soluta nobis est eligendi optio cumque nihil.
+          </p>
+        </div>
+        <div class="col-sm text-center p-5">
+          <span>
+            <i class="fab fa-apple"></i>
+          </span>
+          <p id="description">UI DESIGN</p>
+          <p id="description_detail">
+            Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
+            Sed consequat. leo eget bibendum sodales.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-dark">
+      <div class="container px-5">
+        <div class="row p-x-5">
+          <div class="col-sm text-center text-white p-5">
+            <p class="dynamic_number">1054</p>
+            <p class="dynamic_number_title">CLIENTS</p>
+          </div>
+          <div class="col-sm text-center text-white p-5">
+            <p class="dynamic_number">154</p>
+            <p class="dynamic_number_title">PROJECT</p>
+          </div>
+          <div class="col-sm text-center text-white p-5">
+            <p class="dynamic_number">59</p>
+            <p class="dynamic_number_title">AWARDS</p>
+          </div>
+          <div class="col-sm text-center text-white p-5">
+            <p class="dynamic_number">34</p>
+            <p class="dynamic_number_title">TEAM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div
+        class="container text-center mt-5"
+        style="
+          color: rgb(66, 66, 66);
+          font-size: 1.5em;
+          font-weight: 600;
+          letter-spacing: 0.12em;
+        "
+      >
+        <p>
+          GREAT WORK<a
+            style="
+              color: rgb(250, 164, 36);
+              font-size: 1.2em;
+              font-weight: 600;
+              letter-spacing: 0.12em;
+            "
+            >.</a
+          >
+        </p>
+      </div>
+      <div class="text-center mt-5 mb-3">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-4">
+            <div class="d-flex">
+              <button class="btn_great_work active" onclick="tabs(0)">
+                ALL
+              </button>
+              <button class="btn_great_work" onclick="tabs(1)">BRANDING</button>
+              <button class="btn_great_work" onclick="tabs(2)">DESIGN</button>
+              <button class="btn_great_work" onclick="tabs(3)">PHOTO</button>
+              <button class="btn_great_work" onclick="tabs(4)">COFFEE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center overflow-hidden">
+      <div class="row" id="tabs_images">
+        <img
+          src="https://www.bkkmenu.com/files/2019/09/CafeHoo181.JPG"
+          class="col-md-3 img-fluid p-0"
+          alt="..."
+          id="img_style"
+        />
+        <img
+          src="https://cdn.nohat.cc/thumb/f/720/99f961665e6b4bba8f3f.jpg"
+          class="col-md-3 img-fluid p-0"
+          alt="..."
+          id="img_style"
+        />
+        <img
+          src="https://p1.pxfuel.com/preview/263/1003/641/white-background-modern-internet-white.jpg"
+          class="col-md-3 img-fluid p-0"
+          alt="..."
+          id="img_style"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1596079890744-c1a0462d0975?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8b2ZmaWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+          class="col-md-3 img-fluid p-0"
+          alt="..."
+          id="img_style"
+        />
+
+        <img
+          src="https://media.istockphoto.com/photos/the-setup-for-success-picture-id1165916723?k=6&m=1165916723&s=612x612&w=0&h=jk4D-OaGU9laTNFlLdPrYd-dJYuJPhKr1DVYixQ0N3s="
+          class="col-md-3 img-fluid p-0"
+          alt="..."
+          id="img_style"
+        />
+        <img
+          src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          class="col-md-3 img-fluid p-0"
+          alt="..."
+          id="img_style"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8b2ZmaWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+          class="col-md-3 img-fluid p-0"
+          alt="..."
+          id="img_style"
+        />
+        <img
+          src="https://img.freepik.com/free-photo/modern-interior-meeting-room-marketing-office-with-evening-sunset-empty-large-loft-style-conference-space-with-chairs-tables-furniture-clean-glass-windows_44651-340.jpg?size=626&ext=jpg&ga=GA1.2.1588707983.1618358400"
+          class="col-md-3 img-fluid p-0"
+          alt="..."
+          id="img_style"
+        />
+      </div>
+    </div>
+
+    <footer>
+      <div
+        class="container d-flex justify-content-center align-items-center p-4"
+      >
+        <p>&#169; 2020 Developer. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+      integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+      integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="functions.js"></script>
+  </body>
+</html>
