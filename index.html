@@ -36,10 +36,10 @@
 
   <body>
     <ul
-      class="nav justify-content-start align-items-center bg-transparent position-absolute w-100"
+      class="nav justify-content-center align-items-center w-100"
       id="nav_style"
     >
-      <div class="row w-100">
+      <div class="row w-100 justify-content-center align-items-center">
         <div class="col-md-8" id="logo">Developer</div>
 
         <div
@@ -141,6 +141,8 @@
         "
       >
         <a
+          id="service_a_tag"
+          style="text-decoration: none; color: rgb(66, 66, 66)"
           >SERVICES<a
             style="
               color: rgb(250, 164, 36);
@@ -269,13 +271,13 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-md-4">
             <div class="d-flex">
-              <button class="btn_great_work active" onclick="tabs(0)">
+              <button class="btn_great_work active" onclick="tabs(0,`all`)">
                 ALL
               </button>
-              <button class="btn_great_work" onclick="tabs(1)">BRANDING</button>
-              <button class="btn_great_work" onclick="tabs(2)">DESIGN</button>
-              <button class="btn_great_work" onclick="tabs(3)">PHOTO</button>
-              <button class="btn_great_work" onclick="tabs(4)">COFFEE</button>
+              <button class="btn_great_work" onclick="tabs(1,`branding`)">BRANDING</button>
+              <button class="btn_great_work" onclick="tabs(2,`design`)">DESIGN</button>
+              <button class="btn_great_work" onclick="tabs(3,`photo`)">PHOTO</button>
+              <button class="btn_great_work" onclick="tabs(4,`coffee`)">COFFEE</button>
             </div>
           </div>
         </div>

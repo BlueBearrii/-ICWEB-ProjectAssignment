@@ -25,6 +25,7 @@ function setCounter() {
   });
 }
 
+// Waypoint => when element visible on screen will call setCounter()
 $(".dynamic_number").waypoint(
   function () {
     setCounter();
@@ -34,39 +35,33 @@ $(".dynamic_number").waypoint(
   }
 );
 
-function bannerSlider() {
-  const images = [
-    "https://images.unsplash.com/photo-1529338296731-c4280a44fc48?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-    "https://img.freepik.com/free-photo/side-view-cropped-unrecognizable-business-people-working-common-desk_1098-20474.jpg?size=626&ext=jpg",
-    "https://images.unsplash.com/photo-1551434678-e076c223a692?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b2ZmaWNlJTIwd29ya2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
-    "https://image.freepik.com/free-photo/cheerful-big-smile-from-happy-executive-office-workplace-isolate-white-background_1258-3881.jpg",
-  ];
-  var index = 0;
 
-  setInterval(function () {
-    $("header").css("background-image", "url(" + images[index] + ")");
-    index == images.length - 1 ? (index = 0) : index++;
-  }, 5000);
-}
+// Set opacity of navigation bar when mouse scrolling 
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 100) {
+    $("#nav_style").css("background-color", "rgba(0, 0, 0, 0.6)");
+  } else {
+    $("#nav_style").css("background-color", "rgba(0, 0, 0, 0.0)");
+  }
+});
 
+// Get button elements on great work tab
 const btns = document.querySelectorAll(".btn_great_work");
-function tabs(index) {
-  updateLists(index);
+// Function trigger great work tab => index,label
+function tabs(index, label) {
   for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-      var current = document.getElementsByClassName("active");
-
-      if (current.length > 0) {
-        current[0].className = current[0].className.replace(" active", "");
-      } else {
-      }
-
-      this.className += " active";
-    });
+    if (i == index) {
+      btns[i].className = "btn_great_work active";
+      updateLists(label);
+    } else {
+      btns[i].className = "btn_great_work";
+    }
   }
 }
 
-const rowGallery = document.getElementById("tabs_images");
+
+// Get images elements on great work tab
+const images = document.querySelectorAll("#img_style");
 const arrGallery = [
   {
     src: "https://www.bkkmenu.com/files/2019/09/CafeHoo181.JPG",
@@ -107,59 +102,34 @@ const arrGallery = [
     type: "branding",
   },
 ];
-function updateLists(index) {
-  console.log(index);
-  function createElement(src) {
-    const newImageElement = document.createElement("img");
-    newImageElement.src = src;
-    newImageElement.className = "col-md-3 img-fluid p-0";
-    newImageElement.id = "img_style";
-    newImageElement.alt = "...";
 
-    return newImageElement;
-  }
-
-  while (rowGallery.firstChild) {
-    rowGallery.removeChild(rowGallery.firstChild);
-  }
-
-  if (index == 0) {
-    for(i = 0 ; i< arrGallery.length; i++){
-      rowGallery.appendChild(createElement(arrGallery[i].src));
+// Function update gallery when select type on great work tab
+function updateLists(_label) {
+  if (_label == "all") {
+    for (var i = 0; i < arrGallery.length; i++) {
+      images[i].className = "col-md-3 img-fluid p-0";
     }
-    
-  }
-  if (index == 1) {
-    for(i = 0 ; i< arrGallery.length; i++){
-      if(arrGallery[i].type == "branding"){
-        rowGallery.appendChild(createElement(arrGallery[i].src));
-      }
-    }
-  }
-  if (index == 2) {
-    for(i = 0 ; i< arrGallery.length; i++){
-      if(arrGallery[i].type == "design"){
-        rowGallery.appendChild(createElement(arrGallery[i].src));
-      }
-    }
-  }
-  if (index == 3) {
-    for(i = 0 ; i< arrGallery.length; i++){
-      if(arrGallery[i].type == "photo"){
-        rowGallery.appendChild(createElement(arrGallery[i].src));
-      }
-    }
-  }
-  if (index == 4) {
-    for(i = 0 ; i< arrGallery.length; i++){
-      if(arrGallery[i].type == "coffee"){
-        rowGallery.appendChild(createElement(arrGallery[i].src));
+  } else {
+    for (var i = 0; i < arrGallery.length; i++) {
+      if (arrGallery[i].type == _label) {
+        images[i].className = "col-md-3 img-fluid p-0";
+      } else {
+        images[i].className = "d-none";
       }
     }
   }
 }
 
+
+// On button clicked will scrollview to service element
 function smoothScroll() {
   var elmnt = document.getElementById("service");
   elmnt.scrollIntoView();
 }
+
+const current_url = window.location.href;
+const url_object = new URL(current_url);
+document.getElementById("service_a_tag").href = `${url_object.hostname}/#service`
+console.log(url_object);
+
+
